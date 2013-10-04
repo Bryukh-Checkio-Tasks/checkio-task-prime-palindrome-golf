@@ -115,7 +115,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var numberId = setInterval(function () {
                 n++;
                 changeTr(n);
-                if (n > rightResult) {
+                if (n === rightResult) {
                     clearInterval(numberId);
                 }
             }, 200);
