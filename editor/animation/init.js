@@ -77,7 +77,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             //Dont change the code before it
 
-            var i = checkioInput;
+            var n = checkioInput;
             var $tr = $content.find(".explanation table tr:eq(1)");
             var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
                 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163,
@@ -91,7 +91,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var $prime = $tr.find("td:eq(1)");
             var $palindrom = $tr.find("td:eq(2)");
 
-            var numberId = setInterval(function () {
+            var changeTr = function(i) {
                 $numb.text(i);
                 if (primes.indexOf(i) === -1){
                     $prime.text("False");
@@ -109,8 +109,13 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                     $palindrom.text("True");
                     $palindrom.attr("class", 'true-td');
                 }
-                i++;
-                if (i > rightResult) {
+            };
+
+            changeTr(n);
+            var numberId = setInterval(function () {
+                n++;
+                changeTr(n);
+                if (n > rightResult) {
                     clearInterval(numberId);
                 }
             }, 200);
