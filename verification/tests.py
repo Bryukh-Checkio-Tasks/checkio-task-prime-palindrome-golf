@@ -7,30 +7,30 @@ Each test is dict with
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
 
-
 TESTS = {
     "Basics": [
-        {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
-        },
-        {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
-        }
+        {"input": 31, "answer": 101},
+        {"input": 130, "answer": 131},
+        {"input": 131, "answer": 131},
+        {"input": 212, "answer": 313},
+        {"input": 113, "answer": 131},
+        {"input": 164, "answer": 181},
+        {"input": 21, "answer": 101},
+        {"input": 12, "answer": 101},
+        {"input": 290, "answer": 313},
+        {"input": 205, "answer": 313},
+        {"input": 106, "answer": 131}
     ],
     "Extra": [
-        {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
-        },
-        {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
-        }
+        {"input": 182, "answer": 191},
+        {"input": 43, "answer": 101},
+        {"input": 220, "answer": 313},
+        {"input": 117, "answer": 131},
+        {"input": 132, "answer": 151},
+        {"input": 115, "answer": 131},
+        {"input": 273, "answer": 313},
+        {"input": 245, "answer": 313},
+        {"input": 146, "answer": 151},
+        {"input": 34, "answer": 101}
     ]
 }
