@@ -77,20 +77,49 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             //Dont change the code before it
 
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            var i = checkioInput;
+            var $tr = $content.find(".explanation table tr:eq(1)");
+            var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+                73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163,
+                167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257,
+                263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317];
+            var palindromes = [11, 22, 33, 44, 55, 66, 77, 88, 99, 101,
+                111, 121, 131, 141, 151, 161, 171, 181, 191, 202, 212, 222,
+                232, 242, 252, 262, 272, 282, 292, 303, 313, 323]
+
+            var $numb = $tr.find("td:eq(0)");
+            var $prime = $tr.find("td:eq(1)");
+            var $palindrom = $tr.find("td:eq(2)");
+
+            var numberId = setInterval(function () {
+                $numb.text(i);
+                if (primes.indexOf(i) === -1){
+                    $prime.text("False");
+                    $prime.attr("class", 'false-td');
+                }
+                else {
+                    $prime.text("True");
+                    $prime.attr("class", 'true-td');
+                }
+                if (palindromes.indexOf(i) === -1){
+                    $palindrom.text("False");
+                    $palindrom.attr("class", 'false-td');
+                }
+                else {
+                    $palindrom.text("True");
+                    $palindrom.attr("class", 'true-td');
+                }
+                i++;
+                if (i > rightResult) {
+                    clearInterval(numberId);
+                }
+            }, 200);
 
 
             this_e.setAnimationHeight($content.height() + 60);
 
         });
 
-       
 
         var colorOrange4 = "#F0801A";
         var colorOrange3 = "#FA8F00";

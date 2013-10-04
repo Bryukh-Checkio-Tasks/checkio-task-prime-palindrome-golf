@@ -59,6 +59,36 @@
     border-color: #de0202;
 }
 
+.animation-content .explanation table {
+    border-collapse: collapse;
+    color: #294270;
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+.animation-content .explanation table th {
+    font-weight: bold;
+}
+
+.animation-content .explanation table td.false-td {
+    color: #F0801A;
+}
+
+.animation-content .explanation table td.true-td {
+    color: #294270;
+}
+
+
+.animation-content .explanation table td,
+.animation-content .explanation table th {
+    font-weight: bold;
+    border: dotted 1px #65A1CF;
+    padding: 3px;
+    text-align: center;
+}
+
+
+
 .tryit-content {
     background-color: #dfe8f7;
     font-family: verdana;
