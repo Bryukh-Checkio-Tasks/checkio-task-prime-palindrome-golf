@@ -1,41 +1,46 @@
-<div class="story">
-    <p>”Hey, it looks like that list shows a bunch of locations in the library.” Sofia told Stephen. “I wonder what they
-        are hiding in these locations.”</p>
-
-    <p>”Probably a bunch of books. Maybe a DVD of some old guys talking about historical revisionism or something. Just
-        a guess, it is a Library after all.”</p>
-
-    <p>”Okay WISE GUY, help me find these locations.”</p>
-
-    <p>”Okay, okay, okay. Looks like each number is the location of a book. If we check the book titles maybe they tell
-        us -- “</p>
-
-    <p>”A secret message! Look! The first letters of each book in order spell ‘Find the Prime Palindrome.’ The wuh?”</p>
-
-    <p>”It’s a number that’s prime and also resembles a palindrome. You know, like ‘some men interpret nine memos.’ Its
-        the same thing front to back.” Nikola said as he walked in on the two studying the new clue.</p>
-
-    <p>”Well then,” Said Sofia. “We’d best figure it out!”
-</div>
-
 <p>
-    An integer is said to be a palindrome if it is equal to its reverse in a
-    string form. For example, 79197 and 324423 are palindromes. In this task
-    you will be given an integer N. You must find the smallest integer <span style="white-space: nowrap"> M &gt;= N</span>
-    such that M is a <strong>prime</strong> number and also a <strong>palindrome</strong>.&nbsp;
+    Do you know how to play in Prime Palindrome Golf?
+    You are given a number and you should find the closest palindromic prime number that greater than the given.
 </p>
 
-<p><strong>Input: </strong> N. An integer.</p>
 
-<p><strong>Output: </strong>A prime palindrome. An integer.</p>
+<p>
+    A palindromic number or numeral palindrome is a number that remains the same when its digits are reversed.
+    Like 79197, for example, it is "symmetrical".<br>
+    A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+    In this task you will be given an positive integer.
+    You should find the closest integer that:<br>
+    - is greater than the given number;<br>
+    - is prime;<br>
+    - is palindromic.<br>.
+    For example, the number is 13 and the closest greater palindromic prime is 131.
+    One more example, the number is 2 and the answer is 3, because any one-digit number is a palindrome.
+</p>
+
+<p>
+    And one more rule.
+    This is a <strong>code golf mission</strong> and your main goal to make your code as short as possible.
+    The shorter your code, the more points you earn.
+    Your score for this mission is dynamic and directly related to the length of your code.
+    For reference, scoring is based on the number of characters used.
+    400 characters is the maximum allowable and it will earn you zero points.
+    For each character less than 400, you earn 1 point. For example for 300 character long code earns you 100 points.
+</p>
+<p><strong>Input: </strong> A number as an integer.</p>
+
+<p><strong>Output: </strong>The closest greater palindromic prime as an integer.</p>
 
 <p class="p1"><strong>Example:</strong></p>
-<pre class="brush: python">checkio(31) == 101
-checkio(130) == 131
-checkio(131) == 131
+<pre class="brush: python">
+golf(13) == 101
+golf(2) == 3
+golf(101) == 131
 </pre>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    Prime numbers are very useful for many IT sectors (cryptography, mathematical software).
+    Prime numbers are very useful for many CS areas.
+    But this task is not about elegant or performance code.
+    This is about hacks and tricks in python which help you to shorten your code.
+    You don't need to use this in production, but it can help for deep comprehension of Python.
 </p>
