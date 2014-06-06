@@ -39,17 +39,35 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.in;
+            //YOUR FUNCTION NAME
+            var fname = 'golf';
 
-            if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
-                $content.find('.output').html(data.error.replace(/\n/g, ","));
+            var checkioInput = data.in || 2;
+            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
+            var isCall = true;
 
+            var failError = function (dError) {
+                if (isCall) {
+                    $content.find('.call').html('Fail: ' + checkioInputStr);
+                    $content.find('.call').addClass('error');
+                }
+
+                $content.find('.output').html(dError.replace(/\n/g, ","));
                 $content.find('.output').addClass('error');
-                $content.find('.call').addClass('error');
                 $content.find('.answer').remove();
                 $content.find('.explanation').remove();
                 this_e.setAnimationHeight($content.height() + 60);
+            };
+
+            if (data.error) {
+                failError(data.error);
+                return false;
+            }
+
+            if (data.ext && data.ext.inspector_fail) {
+                failError(data.ext.inspector_result_addon);
+                $content.find('.call').remove();
+                isCall = false;
                 return false;
             }
 
@@ -65,88 +83,84 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
 
             if (!result) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Fail: ' + checkioInputStr);
                 $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
             }
             else {
-                $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Pass: ' + checkioInputStr);
                 $content.find('.answer').remove();
             }
-            //Dont change the code before it
 
-            var n = checkioInput;
-            var $tr = $content.find(".explanation table tr:eq(1)");
-            var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
-                73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163,
-                167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257,
-                263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317];
-            var palindromes = [11, 22, 33, 44, 55, 66, 77, 88, 99, 101,
-                111, 121, 131, 141, 151, 161, 171, 181, 191, 202, 212, 222,
-                232, 242, 252, 262, 272, 282, 292, 303, 313, 323]
-
-            var $numb = $tr.find("td:eq(0)");
-            var $prime = $tr.find("td:eq(1)");
-            var $palindrom = $tr.find("td:eq(2)");
-
-            var changeTr = function(i) {
-                $numb.text(i);
-                if (primes.indexOf(i) === -1){
-                    $prime.text("False");
-                    $prime.attr("class", 'false-td');
-                }
-                else {
-                    $prime.text("True");
-                    $prime.attr("class", 'true-td');
-                }
-                if (palindromes.indexOf(i) === -1){
-                    $palindrom.text("False");
-                    $palindrom.attr("class", 'false-td');
-                }
-                else {
-                    $palindrom.text("True");
-                    $palindrom.attr("class", 'true-td');
-                }
-            };
-
-            changeTr(n);
-            var numberId = setInterval(function () {
-                n++;
-                changeTr(n);
-                if (n === rightResult) {
-                    clearInterval(numberId);
-                }
-            }, 200);
+            var canvas = new RotateNumber($content.find(".explanation")[0]);
+            canvas.draw(rightResult);
 
 
             this_e.setAnimationHeight($content.height() + 60);
 
         });
 
+        //This is for Tryit (but not necessary)
+//        var $tryit;
+//        ext.set_console_process_ret(function (this_e, ret) {
+//            $tryit.find(".checkio-result").html("Result<br>" + ret);
+//        });
+//
+//        ext.set_generate_animation_panel(function (this_e) {
+//            $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find('.tryit-content');
+//            $tryit.find('.bn-check').click(function (e) {
+//                e.preventDefault();
+//                this_e.sendToConsoleCheckiO("something");
+//            });
+//        });
+        function RotateNumber(dom) {
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
+            var colorOrange4 = "#F0801A";
+            var colorOrange3 = "#FA8F00";
+            var colorOrange2 = "#FAA600";
+            var colorOrange1 = "#FABA00";
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+            var colorBlue4 = "#294270";
+            var colorBlue3 = "#006CA9";
+            var colorBlue2 = "#65A1CF";
+            var colorBlue1 = "#8FC7ED";
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#9D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            var colorGrey4 = "#737370";
+            var colorGrey3 = "#9D9E9E";
+            var colorGrey2 = "#C5C6C6";
+            var colorGrey1 = "#EBEDED";
 
-        var colorWhite = "#FFFFFF";
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
+            var colorWhite = "#FFFFFF";
+            var sizeX = 300;
+            var sizeY = 50;
+
+            var paper = Raphael(dom, sizeX, sizeY);
+            var attrText = {"stroke": colorBlue4, "font-size": sizeY * 0.6, "font-family": "Roboto, Verdana, sans-serif"};
+
+            this.draw = function(number) {
+                var t = paper.text(sizeX / 2, sizeY / 2, number).attr(attrText);
+                var s = 1;
+                var k = 0.15;
+                var step = 100;
+                (function rotate(){
+                    s -= k;
+                    if (s <= -1 || s >= 1) {
+                        k = -k;
+                    }
+                    t.animate({"transform": "s" + s + ",1"}, step, callback=rotate);
+                })();
+            }
+        }
+
+
+//Your Additional functions or objects inside scope
+//
+//
+//
 
 
     }
-);
+)
+;

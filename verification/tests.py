@@ -9,28 +9,99 @@ Each test is dict with
 
 TESTS = {
     "Basics": [
-        {"input": 31, "answer": 101},
-        {"input": 130, "answer": 131},
-        {"input": 131, "answer": 131},
-        {"input": 212, "answer": 313},
-        {"input": 113, "answer": 131},
-        {"input": 164, "answer": 181},
-        {"input": 21, "answer": 101},
-        {"input": 12, "answer": 101},
-        {"input": 290, "answer": 313},
-        {"input": 205, "answer": 313},
-        {"input": 106, "answer": 131}
+        {
+            "input": 2,
+            "answer": 3
+        },
+        {
+            "input": 13,
+            "answer": 101
+        },
+        {
+            "input": 101,
+            "answer": 131
+        },
+        {
+            "input": 9000,
+            "answer": 10301
+        },
+    ],
+    "Edge": [
+        {
+            "input": 1,
+            "answer": 2
+        },
+        {
+            "input": 999999,
+            "answer": 1003001
+        },
+        {
+            "input": 10,
+            "answer": 11
+        },
+        {
+            "input": 8,
+            "answer": 11
+        },
+        {
+            "input": 5,
+            "answer": 7
+        },
+
+        {
+            "input": 11,
+            "answer": 101
+        },
+
+        {
+            "input": 98689,
+            "answer": 1003001
+        },
+        {
+            "input": 98688,
+            "answer": 98689
+        },
     ],
     "Extra": [
-        {"input": 182, "answer": 191},
-        {"input": 43, "answer": 101},
-        {"input": 220, "answer": 313},
-        {"input": 117, "answer": 131},
-        {"input": 132, "answer": 151},
-        {"input": 115, "answer": 131},
-        {"input": 273, "answer": 313},
-        {"input": 245, "answer": 313},
-        {"input": 146, "answer": 151},
-        {"input": 34, "answer": 101}
+        {
+            "input": 7758,
+            "answer": 10301
+        },
+        {
+            "input": 9520,
+            "answer": 10301
+        },
+        {
+            "input": 5157,
+            "answer": 10301
+        },
+        {
+            "input": 7091,
+            "answer": 10301
+        },
+        {
+            "input": 8932,
+            "answer": 10301
+        },
+        {
+            "input": 1401,
+            "answer": 10301
+        },
+        {
+            "input": 3841,
+            "answer": 10301
+        },
+        {
+            "input": 5762,
+            "answer": 10301
+        },
+        {
+            "input": 4434,
+            "answer": 10301
+        },
+        {
+            "input": 679,
+            "answer": 727
+        },
     ]
 }

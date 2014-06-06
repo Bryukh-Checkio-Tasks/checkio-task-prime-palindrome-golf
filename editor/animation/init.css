@@ -34,7 +34,7 @@
 .animation-content{
     background-color: #dfe8f7;
     color: #696969;
-    font-family: verdana;
+    font-family: Verdana, Arial, helvetica, sans-serif;;
     font-size: 15px;
     width: 100%;
 }
@@ -48,10 +48,9 @@
     margin: 10px;
     color: black;
     text-align: center;
-    letter-spacing: 0.7px;
+    letter-spacing: 1px;
     word-break: break-word;
     white-space: pre-wrap;
-
 }
 
 .animation-content .error{
@@ -59,39 +58,9 @@
     border-color: #de0202;
 }
 
-.animation-content .explanation table {
-    border-collapse: collapse;
-    color: #294270;
-    font-family: Verdana;
-    font-size: 16px;
-}
-
-.animation-content .explanation table th {
-    font-weight: bold;
-}
-
-.animation-content .explanation table td.false-td {
-    color: #F0801A;
-}
-
-.animation-content .explanation table td.true-td {
-    color: #294270;
-}
-
-
-.animation-content .explanation table td,
-.animation-content .explanation table th {
-    font-weight: bold;
-    border: dotted 1px #65A1CF;
-    padding: 3px;
-    text-align: center;
-}
-
-
-
 .tryit-content {
     background-color: #dfe8f7;
-    font-family: verdana;
+    font-family: Verdana, Arial, helvetica, sans-serif;
 }
 
 .tryit-content .tool td{
@@ -115,7 +84,7 @@
 .tryit-content .btn {
     padding: 4px 6px;
     font-size: 14px;
-    font-family: Verdana;
+    font-family: Verdana, Arial, helvetica, sans-serif;;
     font-weight: 500;
     line-height: 1.428571429;
     text-align: center;
