@@ -1,4 +1,4 @@
-checkio-task-prime-palindromes
+checkio-task-prime-palindrome-golf
 ==============================
 
-Checkio Task "Prime Palindromes"
+Checkio Task "Prime Palindrome Golf"
