@@ -54,10 +54,6 @@ TESTS = {
         },
 
         {
-            "input": 98689,
-            "answer": 1003001
-        },
-        {
             "input": 98688,
             "answer": 98689
         },
@@ -85,18 +81,6 @@ TESTS = {
         },
         {
             "input": 1401,
-            "answer": 10301
-        },
-        {
-            "input": 3841,
-            "answer": 10301
-        },
-        {
-            "input": 5762,
-            "answer": 10301
-        },
-        {
-            "input": 4434,
             "answer": 10301
         },
         {
