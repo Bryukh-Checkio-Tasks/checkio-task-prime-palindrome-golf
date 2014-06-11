@@ -81,7 +81,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             //YOUR FUNCTION NAME
             var fname = 'golf';
 
-            var checkioInput = data.in || 2;
+            var checkioInput = data.in || 1401;
             var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
             var isCall = true;
 
