@@ -60,12 +60,36 @@ TESTS = {
     ],
     "Extra": [
         {
-            "input": 7758,
+            "input": 551,
+            "answer": 727
+        },
+        {
+            "input": 931,
             "answer": 10301
         },
         {
-            "input": 9520,
-            "answer": 10301
+            "input": 771,
+            "answer": 787
+        },
+        {
+            "input": 270,
+            "answer": 313
+        },
+        {
+            "input": 228,
+            "answer": 313
+        },
+        {
+            "input": 171,
+            "answer": 181
+        },
+        {
+            "input": 213,
+            "answer": 313
+        },
+        {
+            "input": 750,
+            "answer": 757
         },
         {
             "input": 5157,
@@ -76,12 +100,12 @@ TESTS = {
             "answer": 10301
         },
         {
-            "input": 8932,
-            "answer": 10301
+            "input": 28535,
+            "answer": 30103
         },
         {
-            "input": 1401,
-            "answer": 10301
+            "input": 37081,
+            "answer": 37273
         },
         {
             "input": 679,
