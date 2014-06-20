@@ -32,10 +32,6 @@ TESTS = {
             "answer": 2
         },
         {
-            "input": 999999,
-            "answer": 1003001
-        },
-        {
             "input": 10,
             "answer": 11
         },
