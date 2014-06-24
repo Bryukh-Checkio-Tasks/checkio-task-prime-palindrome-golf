@@ -1,0 +1,56 @@
+<p>
+    ¿Sabes jugar al golf de los palíndromos primos?
+    Te damos un número y tu reto es encontrar el número primo más cercano al dado, que también sea un palíndromo.
+</p>
+
+
+<p>
+    Un número palíndromo es aquel que se lee igual hacia adelante que hacia atrás, por ejemplo: 79197.
+    Estos números son simétricos.
+    <br>
+    Un número primo es un entero mayor que 1 que tiene únicamente dos divisores distintos: él mismo y el 1.
+    En esta misión recibirás un numero entero positivo.
+    Tendrás que encontrar el entero más cercano que cumpla las siguientes condiciones:<br>
+    - sea mayor que el numero recibido<br>
+    - sea primo<br>
+    - sea un palíndromo<br>
+    Por ejemplo: para el número 13, el palíndromo primo más cercano mayor que 13 es el 101.
+    O, por ejemplo para el número 2 la respuesta es el 3, porque todo número de 1 digito es un palíndromo.
+</p>
+
+<p>
+    Vamos a poner una regla extra en esta misión.
+    En esta misión estamos jugando al <strong>golf usando código</strong> por lo que vamos a jugar a hacer el código lo más reducido posible.
+    Cuanto más corto sea tu código, ¡más puntos ganaras!
+    La puntuación en esta misión será dinámica y dependerá directamente de la longitud de tu código.
+    Como referencia, la puntuación se decide en base al número de caracteres utilizados.
+    250 caracteres es el máximo permitido para resolver la misión y obtener 0 puntos.
+    Por cada carácter menos de 250 que utilices, recibirás 1 punto. Por ejemplo: una solución de 200 caracteres obtendrá 50 puntos.
+</p>
+
+<p>
+    <strong>Importante: </strong> El límite de llamadas recursivas está fijado en 100. No intentes resolver esta misión usando recursión.
+</p>
+
+<p><strong>Entrada: </strong> Un número entero.</p>
+
+<p><strong>Salida: </strong>El entero (mayor que el recibido) más cercano, que es primo y palíndromo.</p>
+
+<p><strong>Ejemplo:</strong></p>
+<pre class="brush: python">
+golf(2) == 3
+golf(13) == 101
+golf(101) == 131
+</pre>
+
+<p class="for_info_only">
+    <strong>Utilidad: </strong>
+    Los números primos se usan en multitud de áreas en programación. Sin embargo, esta misión no se centra en crear código elegante o eficiente.
+    En esta misión buscamos que utilices todos los trucos que puedas para reducir tu código al mínimo.
+    No es código que usarías en un sistema en producción pero te ayudara a aprender muchos secretos de Python.
+</p>
+
+<p>
+    <strong>Precondición: </strong>
+    0 &le; número &lt; 98689
+</p>
