@@ -1,0 +1,67 @@
+<p>
+    Tudja-e Ön, hogyan kell játszani az Egyszerű Palindrom Golfot? 
+    Önnek megneveznek egy számot, majd Önnek meg kell határozni e számhoz legközelebb 
+    álló, de tőle nagyobb prím palindromszámot.
+</p>
+
+
+<p>
+    A palindromszám – az egy olyan szám, melynek értéke nem változik „visszafelé” 
+    (jobbról balra) olvasva. Például, 79197. Néha az ilyen számokat még szimmetrikus 
+    számoknak is szokták nevezni.
+    <br>
+    A prímszám – az egy olyan egytől nagyobb természetes szám, melynek egyedül csak 
+    az egyes és a szám önmaga az osztója. Ebben a feladatban adott egy pozitív egész 
+    szám. Meg kell határozni egy olyan e számhoz a legközelebb álló számot, amely 
+    megfelel az alábbi követelményeknek:<br>
+    - ez a szám nagyobb a megadott számnál;<br>
+    - ez a szám egy prímszám;<br>
+    - ez a szám egy palindromszám.<br>
+    Például, ha adott a 13-as szám, akkor a legközelebbi nagyobb prím palindromszám – 
+    az a 101-es lesz. A 2-es szám számára a felelet az 3, mivel minden egy számjegyből 
+    álló szám már eleve palindromszám.
+</p>
+
+<p>
+    E feladat számára van még egy követelmény. 
+    Ez a feladat az úgynevezett <strong>programozói golf</strong> (code golf)
+    feladatok családjába tartozik, és itt a cél az, hogy minél rövidebb forráskódból 
+    álljon a megoldás. A feladat megoldásáért szerezhető pontszám különböző lehet és 
+    a forráskód hosszától függ. A pontozás a forráskódban szereplő karakterek számán 
+    alapul. 250 karakter a felső ponthatár, – ezen felül már nem jár pontszám. Ellenben 
+    minden egyes karakterért, ami a 250 és forráskód hossza közötti különbséget teszi 
+    ki, egy-egy pont jár. Például, ha a forráskód 200 karakter hosszú, akkor 50 pont 
+    jár a feladatért. 
+</p>
+
+<p>
+    <strong>Fontos megjegyzés:</strong> az adott feladatban korlátozott a rekurziós 
+    hívások mélysége, ami alapértelmezetten 100. Ezért itt a rekurzió használata 
+    nem a legjobb ötlet.
+</p>
+
+<p><strong>Bemeneti adatok: </strong> egy egész szám (int).</p>
+
+<p><strong>Kimeneti adatok: </strong>a legközelebb álló, az adott számtól nagyobb prím 
+palindromszám egész számként (int)</p>
+
+<p><strong>Példák:</strong></p>
+<pre class="brush: python">
+golf(2) == 3
+golf(13) == 101
+golf(101) == 131
+</pre>
+
+<p class="for_info_only">
+    <strong>Alkalmazása: </strong>
+    ПA prímszámok sok helyen alkalmazhatók a számítástechnikában, a palindromok pedig, 
+    hasznosak lehetnek az információkódolás során. Ez a feladat nem az elegáns könnyen 
+    olvasható kódról szól. Itt szükség lehet Python programozási trükkökre és hackekre. 
+    Habár a valós projektekben nem igazán szoktak használni ilyesfajta megoldásokat, az 
+    itt szerzett ismeretek hasznosak lehetnek a programkód működésének mélyebb megértéséhez.
+</p>
+
+<p>
+    <strong>Előfeltételek: </strong><br>
+    0 &le; number &lt; 98689
+</p>
