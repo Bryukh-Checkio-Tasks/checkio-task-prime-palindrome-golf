@@ -1,0 +1,62 @@
+<p>
+    Prime Palindrome Golf を知っていますか？
+    入力としてある数が与えられ、その数より大きく、その数と最も近い対称な素数を探すコードゴルフのことです。
+</p>
+
+
+<p>
+    palindromic number もしくは numeral palindrome というのは、各桁を反転しても同じ値になるものです。例えば 79197 のようなものです。これらの数は左右対称です。
+    <br>
+    素数は 1 より大きい自然数で、かつ 1 と自分自身でのみ割り切れる数のことです。この問題では一つの正の整数が与えられ、次の条件を満足する整数を探します：<br>
+    - 与えられた数より大きく、<br>
+    - 素数であり、<br>
+    - 対称である。<br>
+    例えば 13 が与えられたとすると、これより大きくて最も近い対称な素数は 101 です。
+    また、2 が与えられたとすると 3 がその条件を満足します。
+    なぜなら、一桁の素数は対称だからです。
+</p>
+
+<p>
+    もう一つルールがあります。
+    この問題は<strong>コードゴルフ</strong>なので、短いプログラムの方が高い評価を得られます。
+    スコアはプログラムの文字数で決められます。
+    250 文字が最大の文字数で 0 点です。
+    250 文字を基準として 1 文字少なくなるごとに 1 点追加されます。
+    つまり 200 文字のプログラムは 50 点です。
+</p>
+
+<p>
+    <strong>重要： </strong>システムの制約のため、再帰関数のコールは 100 回までです。再帰関数を使わない方法で挑戦してください。
+</p>
+
+<p><strong>入力： </strong>一つの整数。</p>
+
+<p><strong>出力： </strong>入力値よりも大きい対称な素数の内、最も入力値に近い数。</p>
+
+<p><strong>例：</strong></p>
+<pre class="brush: python">
+golf(2) == 3
+golf(13) == 101
+golf(101) == 131
+</pre>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Prime numbers are very useful for many CS areas, however; this task is not about elegant or performance code.
+    This is about hacks and tricks in python which help you to shorten your code.
+    You don't need to use this in production, but it can help for deeper comprehension of Python.
+</p>
+
+<p class="for_info_only">
+    <strong>どう使われるか： </strong>
+    素数は計算機科学の世界でとても重要です。
+    しかしながら、この問題はコードの洗練さや上品さを問うものではありません。
+    これは Python をハックし、コードを短くすることを楽しむ問題です。
+    ここで書くコードが製品として使う必要はありません。
+    しかしながら、この問題を通して Python の理解を深めることも可能でしょう。
+</p>
+
+<p>
+    <strong>条件： </strong>
+    0 &le; number &lt; 98689
+</p>
