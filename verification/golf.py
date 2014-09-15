@@ -35,11 +35,11 @@ class CheckioRefereeGolf(CheckiOReferee):
                 self.restart_env()
             else:
                 code_len = len(self.code)
-                if code_len >= self.max_length:
-                    message = "Your code is correct, but this is too long ({}) for any points".format(code_len)
-                    self.current_test["inspector_result_addon"] = message
-                    self.current_test["inspector_fail"] = True
-                    api.request_write_ext(self.current_test)
-                    return api.fail(0, message)
-                else:
-                    api.success(self.max_length - code_len)
+                # if code_len >= self.max_length:
+                #     message = "Your code is correct, but this is too long ({}) for any points".format(code_len)
+                #     self.current_test["inspector_result_addon"] = message
+                #     self.current_test["inspector_fail"] = True
+                #     api.request_write_ext(self.current_test)
+                #     return api.fail(0, message)
+                # else:
+                api.success(max(self.max_length - code_len, 0))
