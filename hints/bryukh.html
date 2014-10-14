@@ -1,0 +1,56 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission
+    </div>
+    <div class="answer">
+        You can increase the number and check if it's prime and if it's also a palindrome.
+
+<pre class="brush: python">
+while true:
+    number += 1
+    if is_prime(number) and is_palindrome(number):
+        return number
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I need some help to proceed with the mission
+    </div>
+    <div class="answer">
+        Checking if it's a palindrome is pretty simple:
+
+<pre class="brush: python">
+if str(number) == reversed(str(number)):
+    OR
+if str(number) == str(number)[::-1]:
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I have gone half way through. Need help!
+    </div>
+    <div class="answer">
+        To check if it's prime is also very simple, but kinda dumb and slow.
+<pre class="brush: python">
+for i in range(2, number):
+    if not number % 2:
+        # NOT PRIME
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I am stuck. I need a small hint.
+    </div>
+    <div class="answer">
+        If you want to get points, then you will need to shorten your code. Use one symbol variable
+        names for example, and remove redundant spaces where you can.
+
+    </div>
+</div>
+
+
+</body>
