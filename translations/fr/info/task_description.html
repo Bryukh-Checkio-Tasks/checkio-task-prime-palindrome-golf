@@ -1,0 +1,58 @@
+<p>
+    Savez-vous jouer à Prime Palindome Golf ? Il s'agit, à partir d'un nombre
+	entier donné, de trouver l'entier supérieur le plus proche qui soit 
+	un nombre premier et palindrome.
+	
+</p>
+
+<p>
+    Un nombre palindrome est un nombre dont l'écriture décimale se lit de la même façon
+	de la droite vers la gauche et de la gauche vers la droite. 79197 en est un exemple.
+	L'écriture de ces nombres est symétrique.
+    <br>
+    Un nombre premier est un nombre entier naturel supérieur à 2 qui n'a pas d'autre diviseur
+	positif que 1 et lui-même.<br>
+    Dans ce défi, un nombre entier vous est donné. Il faut trouver l'entier le plus proche qui:<br>
+    - est strictement plus grand que le nombre donné ;<br>
+    - est premier ;<br>
+    - est palindrome.<br>
+    Par exemple : pour le nombre 13, le plus proche premier palindrome supérieur est 101.
+	Pour le nombre 2, la réponse est 3 car un chiffre est palindrome.
+</p>
+
+<p>
+    Il y a une règle supplémentaire pour ce défi. C'est une <strong>mission de code golf</strong> 
+	et l'objectif est de faire le code le plus court possible. Plus le code est court, plus vous gagnez de points.
+	Le score pour cette mission est dynamique et calculé en fonction
+	de la longueur du code. Votre code doit faire moins de 250 caractères. Pour chaque caractère de moins 
+	que 250, vous gagnez 1 point. Par exemple, un code de 200 caractères rapporte 50 points.
+    
+</p>
+
+<p>
+    <strong>Important: </strong> Nous utilisons la limite de profondeur de récursivité par défaut (100). Alors n'essayez pas de 
+	résoudre récursivement cette mission.
+</p>
+
+<p><strong>Input: </strong> Un nombre entier naturel (int). </p>
+
+<p><strong>Output: </strong>Le nombre premier palindrome supérieur le plus proche (int).</p>
+
+<p><strong>Exemple:</strong></p>
+<pre class="brush: python">
+golf(2) == 3
+golf(13) == 101
+golf(101) == 131
+</pre>
+
+<p class="for_info_only">
+    <strong>Utilisation: </strong>
+    Les nombres premiers sont très utilisés dans de nombreux domaines.
+	Ce défi ne traite pas d'élégance ou de performance de code. Il s'agit de trucs et astuce de Python
+	pour réduire la longueur le code. Cela peut aider à une meilleure compréhension de Python.
+</p>
+
+<p>
+    <strong>Précondition: </strong>
+    0 &lt; número &lt; 98689
+</p>
